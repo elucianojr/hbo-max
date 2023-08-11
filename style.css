@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
+}
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(
+        45deg,
+        #9b34ef 0%,
+        #490cb0 20%,
+        transparent 50%
+    );
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(
+        90deg,
+        #5516ba,
+        rgba(255, 0, 229, 0.5) 80%
+    );
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+
+    scroll-behavior: smooth;
+}
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: #020228b4;
+    padding: 12px;
+    position: fixed;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    margin-left: 10px;
+}
+.logohbo {
+    width: 45%;
+}
+.login {
+    width: 50%;
+    text-align: right;
+}
+.login a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+.login a:hover {
+    color: #b535f6;
+}
+.login .assine {
+    padding: 8px 26px;
+    border-radius: 20px;
+    background-color: #b535f6;
+    font-size: 14px;
+}
+.login .assine:hover {
+    background-color: white;
+    color: #000;
+}
+.header-content {
+    height: 520px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 80px 10px 40px 40px;
+}
+.header-content img {
+    margin: 10px;
+}
+.header-content h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    font-family: "Quicksand", sans-serif;
+}
+.header-content h2 {
+    color: #fff;
+    font-size: 2.3rem;
+    padding-bottom: 20px;
+    margin-top: -10px;
+    font-family: "Raleway", sans-serif;
+}
+.header-content h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: "Raleway", sans-serif;
+    padding-top: 20px;
+}
+.header-content span {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    margin-top: -9px;
+}
+.header-content em {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: normal;
+    font-family: "Raleway", sans-serif;
+}
+.header-content p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Quicksand", sans-serif;
+}
+.header-content button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fcf8f8;
+    font-size: 1.5rem;
+    font-family: "Raleway", sans-serif;
+    background: var(--btn-bg-color-gradient);
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    animation: wiggle 2.2s linear infinite;
+}
+.header-content button:hover {
+    background: var(--primary-color);
+    cursor: pointer;
+    border-color: var(--tertiary-color);
+    filter: brightness(1.5);
+    animation: wiggle 2.2s linear infinite;
+}
+@keyframes wiggle {
+    0%,
+    10% {
+        transform: rotate(0);
+    }
+    15% {
+        transform: rotate(-15deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(10deg);
+    }
+    35% {
+        transform: rotate(-10deg);
+    }
+    40%,
+    100% {
+        transform: rotate(0);
+    }
+}
+hr {
+    width: 50%;
+    height: 5px;
+    color: #5516ba;
+    border: 0;
+    border-radius: 5px;
+    background: rgb(156, 15, 228);
+    background: linear-gradient(
+        90deg,
+        rgba(156, 15, 228, 1) 0%,
+        rgba(255, 0, 229, 1) 55%
+    );
+}
+.planos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.planos h2 {
+    padding-top: 20px;
+    color: #fff;
+    font-size: 1.7rem;
+    padding-bottom: 20px;
+    margin-top: -10px;
+    font-family: "Raleway", sans-serif;
+}
+.plano-infor01:hover {
+    transform: rotateY(30deg);
+    transition: 2s;
+    cursor: pointer;
+}
+.plano-infor02:hover {
+    transform: rotateY(30deg);
+    transition: 2s;
+    cursor: pointer;
+}
+.plano-infor01,
+.plano-infor02 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vh;
+    height: 80vh;
+    background: var(--card-bg-color);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.plano-infor01,
+.plano-infor02,
+h3,
+span {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 20px;
+}
+.plano-infor01,
+.plano-infor02,
+span {
+    color: rgb(241, 9, 241);
+    display: inline-block;
+    float: right;
+}
+.plano-infor01 div {
+    text-align: center;
+    margin-top: 153px;
+}
+.plano-infor02 div {
+    text-align: center;
+    margin-top: 92px;
+}
+.plano-infor01,
+.plano-infor02,
+em {
+    color: white;
+}
+.plano-infor01,
+.plano-infor02,
+h5 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "Quicksand", sans-serif;
+    margin: 18px;
+}
+
+.link-button {
+    margin: 0 auto;
+    border: 1px solid rgb(218, 8, 218);
+    border-radius: 20px;
+    padding: 10px;
+    background: var(--btn-bg-color-gradient);
+    color: white;
+    width: 50vh;
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-family: "Quicksand", sans-serif;
+}
+
+.link-button a {
+    text-decoration: none;
+    color: white;
+    margin-top: 40px;
+}
+.link-button:hover {
+    background: var(--primary-color);
+    transform: scaleX(1.1);
+    transition: 1s linear;
+    cursor: pointer;
+    border-color: var(--tertiary-color);
+}
+.title h2 {
+    padding-top: 60px;
+    color: #fff;
+    font-size: 1.7rem;
+    padding-bottom: 50px;
+    font-family: "Raleway", sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 50px;
+}
+.card {
+    width: 355px;
+    height: 532px;
+
+}
+.card01 {
+    background-image: url(img/hbo-default_0.webp);
+    background-size: 100%;
+    object-fit: cover;
+}
+.card01:hover {
+    background-image: url(img/hbo-hover_0.webp);
+    cursor: pointer;
+    background-size: 100%;
+    object-fit: fill;
+    transition: 1s linear;
+    
+}
+.card02 {
+    background-image: url(img/MAX-Default.webp);
+    background-size: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.card02:hover {
+    background-image: url(img/MAX-Hover.webp);
+    cursor: pointer;
+    background-size: 100%;
+    object-fit: fill;
+    transition: 1s linear;
+}
+.card03 {
+    background-image: url(img/DC_Default.webp);
+    background-size: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.card03:hover {
+    background-image: url(img/DC-Hover.webp);
+    cursor: pointer;
+    background-size: 100%;
+    object-fit: fill;
+    transition: 1s linear;
+}
+.card04 {
+    background-image: url(img/WB-Default.webp);
+    background-size: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.card04:hover {
+    background-image: url(img/WB-Hover.webp);
+    cursor: pointer;
+    background-size: 100%;
+    object-fit: fill;
+    transition: 1s linear;
+}
+.card05 {
+    background-image: url(img/CN-Default.webp);
+    background-size: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.card05:hover {
+    background-image: url(img/CN-Hover.png);
+    cursor: pointer;
+    background-size: 100%;
+    object-fit: fill;
+    transition: 1s linear;
+}
+.card06 {
+    background-image: url(img/UCL-Default.webp);
+    background-size: 100%;
+    object-fit: fill;
+    cursor: pointer;
+}
+.card06:hover {
+    background-image: url(img/UCL-Hover.webp);
+    cursor: pointer;
+    background-size: 100%;
+    object-fit: fill;
+    transition: 1s linear;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+}
+.footer {
+    padding-bottom: 15px;
+}
+footer p {
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: normal;
+    font-family: "Quicksand", sans-serif;
+    padding-bottom: 50px;
+}
+.footer a {
+    margin-right: 35px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "Quicksand", sans-serif;
+}
+.footer a:hover {
+    color: #ff00e5;
+}
+.redes-socias img {
+    margin-right: 35px;
+}
