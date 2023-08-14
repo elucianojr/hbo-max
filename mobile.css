@@ -1,0 +1,88 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: relative;
+    padding: 60px;
+    box-sizing: border-box;
+}
+.logohbo {
+    width: 60%;
+    box-sizing: border-box;
+}
+.logohbo img {
+    width: 70px;
+}
+.login {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 30px;
+}
+.assine {
+    width: 20vh;
+    color: #fff;
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+}
+.entrar {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 10px;
+}
+header {
+    margin: 0px;
+}
+.header-content {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+.header-content img {
+    max-width: 50px;
+}
+.header-content h1 {
+    color: #fff;
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+}
+.header-content p {
+    margin-bottom: 50px;
+}
+
+.planos h2 {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+}
+.plano-infor01 {
+    width: 90%;
+
+    box-sizing: border-box;
+}
+.plano-infor02 {
+    margin-top: 150px;
+    margin-bottom: 190px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.link-button {
+    width: 30vh;
+}
+
+footer {
+    padding: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
